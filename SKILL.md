@@ -29,8 +29,8 @@ description: 中文作业自动求解与 LaTeX 排版技能。输入一份作业
 # 依赖
 pip install -r requirements.txt
 
-# 运行（Windows 需先设置 PYTHONPATH=src，Linux/macOS 同）
-PYTHONPATH=src python -m homework_solver.cli \
+# 运行（Windows 需先设置 PYTHONPATH=homework-solver，Linux/macOS 同）
+PYTHONPATH=homework-solver python -m homework_solver.cli \
     --input examples/homework_linalg_prob.md \
     --outdir out \
     --title "线性代数与概率论基础 作业解答" \

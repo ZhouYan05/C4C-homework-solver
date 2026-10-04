@@ -27,12 +27,12 @@ pip install -r requirements.txt
 ### 第 2 步：跑一条命令
 
 ```bash
-PYTHONPATH=src python -m homework_solver.cli \
+PYTHONPATH=homework-solver python -m homework_solver.cli \
     --input examples/homework_linalg_prob.md \
     --outdir out --title "作业解答" --author "你的名字"
 ```
 
-Windows PowerShell 必须带 `$env:PYTHONPATH="src";`，否则会 `ModuleNotFoundError`。
+Windows PowerShell 必须带 `$env:PYTHONPATH="homework-solver";`，否则会 `ModuleNotFoundError`。
 
 ### 第 3 步：看结果
 
@@ -61,7 +61,7 @@ Windows PowerShell 必须带 `$env:PYTHONPATH="src";`，否则会 `ModuleNotFoun
 
 | 现象 | 原因 | 解决 |
 | --- | --- | --- |
-| `ModuleNotFoundError: homework_solver` | 没设 PYTHONPATH | 加 `PYTHONPATH=src` / `$env:PYTHONPATH="src"` |
+| `ModuleNotFoundError: homework_solver` | 没设 PYTHONPATH | 加 `PYTHONPATH=homework-solver` / `$env:PYTHONPATH="homework-solver"` |
 | `! Missing $ inserted` | 题面里有裸的数学片段 | 已在 `latex_utils.normalize_math()` 处理；如是新题型请补充规则 |
 | PDF 没生成 | 没有 xelatex / ctex | 装 MiKTeX 或 TeX Live，确保 `xelatex` 在 PATH |
 | 答案对但 `verified:false` | 核验路径未覆盖该题型 | 为新题型增加独立核验，勿直接放行 |

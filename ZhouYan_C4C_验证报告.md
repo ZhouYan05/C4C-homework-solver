@@ -9,7 +9,7 @@
 | SymPy | 1.14.0 |
 | LaTeX 引擎 | MiKTeX `xelatex.exe` |
 | LLM 后端 | **未配置密钥**（DASHSCOPE / MOONSHOT / DEEPSEEK 均未设置）→ 纯确定性模式 |
-| 运行命令 | `PYTHONPATH=src python -m homework_solver.cli --input examples/homework_linalg_prob.md --outdir out --title "线性代数与概率论基础 作业解答" --author "ZhouYan"` |
+| 运行命令 | `PYTHONPATH=homework-solver python -m homework_solver.cli --input examples/homework_linalg_prob.md --outdir out --title "线性代数与概率论基础 作业解答" --author "ZhouYan"` |
 
 ## 二、验证方法学
 
@@ -48,7 +48,7 @@
 `tests/test_solvers.py` 覆盖全部 6 类题型的求解 + 核验，**不需要网络**：
 
 ```
-PYTHONPATH=src python tests/test_solvers.py
+PYTHONPATH=homework-solver python tests/test_solvers.py
 => ALL SOLVER TESTS PASSED
 ```
 

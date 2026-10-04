@@ -25,8 +25,8 @@
 ```bash
 pip install -r requirements.txt
 
-# 在 Linux/macOS，或 Windows 下先设置 PYTHONPATH=src
-PYTHONPATH=src python -m homework_solver.cli \
+# 在 Linux/macOS，或 Windows 下先设置 PYTHONPATH=homework-solver
+PYTHONPATH=homework-solver python -m homework_solver.cli \
     --input examples/homework_linalg_prob.md \
     --outdir out \
     --title "线性代数与概率论基础 作业解答" \
@@ -45,7 +45,7 @@ PYTHONPATH=src python -m homework_solver.cli \
 自检单元测试（离线，无需网络）：
 
 ```bash
-PYTHONPATH=src python tests/test_solvers.py
+PYTHONPATH=homework-solver python tests/test_solvers.py
 # => ALL SOLVER TESTS PASSED
 ```
 
@@ -63,7 +63,7 @@ PYTHONPATH=src python tests/test_solvers.py
 ## 项目结构
 
 ```
-src/homework_solver/
+homework-solver/homework_solver/
   ingest.py       # md/txt/pdf/docx/ocr 摄入
   parse.py        # 题目切分
   classify.py     # 6 规则路由
