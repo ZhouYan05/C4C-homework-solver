@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+out/
+*.aux
+*.log
+*.out
+*.toc
+.venv/
+.env
